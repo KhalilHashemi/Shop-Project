@@ -1,0 +1,36 @@
+.search{
+    margin: 0 10px 50px;
+}
+.search input{
+    border: 2px dashed #03346E;
+    padding: 10px;
+    width: 250px;
+    font-size: 0.9rem;
+    color: #03346E;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.search input:focus{
+    border:2px solid #03346E;
+
+}
+.search input::placeholder{
+    color: #03346E;
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #03346E;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 100ms linear all;
+}
+.search button:hover{
+    background-color: #011e42;
+
+}

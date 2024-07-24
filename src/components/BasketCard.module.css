@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px dashed #03346E;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.card img {
+  width: 60px;
+  height: 60px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+}
+.actions span {
+  width: 20px;
+  text-align: center;
+  margin: 0 4px;
+}
+.actions button {
+  background-color: #E2E2B6;
+  color: #021526;
+  border: none;
+  font-size: 1.3rem;
+  height: 30px;
+  width: 30px;
+  line-height: 25px;
+  padding: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 100ms linear background-color;
+}
+.actions button:hover{
+  background-color: #d2d299;
+
+}
+
+.actions button svg{
+  margin-top: 2px;
+}

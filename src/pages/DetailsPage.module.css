@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  width: 100%;
+}
+.container img {
+  width: 300px;
+  padding: 15px 25px;
+  background-color: #fff;
+  border: 2px dashed #03346E;
+  border-radius: 50px;
+  margin: 10px;
+  margin-right: 50px;
+}
+.information {
+  width: 100%;
+  border: 2px dashed #03346E;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 50px;
+}
+.information h3 {
+  color: #021526;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.description {
+  color: #03346E;
+  font-size: 1.1rem;
+  width: 500px;
+  margin-bottom: 40px;
+}
+.category svg,
+.information span svg {
+  color: #6EACDA;
+  margin-right: 10px;
+}
+.information div{
+    display: flex;
+    justify-content: space-between;
+}
+.information div span{
+  display: flex;
+  align-items: center;
+}
+.information a {
+    display: flex;
+    align-items: center;
+    background-color: #032d51;
+    padding: 5px 10px ;
+    color: #fff;
+    border-radius: 12px;
+    transition: 100ms linear background-color;
+}
+.information a:hover{
+  background-color: #021526;
+
+}
+.information a svg {
+    margin-right: 10px;
+}

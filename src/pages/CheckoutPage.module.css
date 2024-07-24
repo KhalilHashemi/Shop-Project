@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  min-height: 60vh;
+}
+.container div h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.container div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #032d51;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 12px;
+  transition: 100ms linear background-color;
+}
+.container div a:hover {
+  background-color: #021526;
+}
+.container div span {
+  margin-left: 5px;
+}
+.products {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+.notFound {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.notFound h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.notFound a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #032d51;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 12px;
+  transition: 100ms linear background-color;
+}
+.notFound a:hover {
+  background-color: #021526;
+}
+.notFound span{
+    margin-left: 5px;
+}
+.notFound img {
+  width: 600px;
+  height: 600px;
+}
