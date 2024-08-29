@@ -8,3 +8,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (min-width: 300px) and (max-width: 850px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .products {
+    justify-content: center;
+  }
+}

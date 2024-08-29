@@ -7,6 +7,7 @@ import { productQuantity, shortenText } from "../helpers/helper";
 
 import styles from "./Card.module.css";
 import { useCart } from "../context/CartContext";
+import NotFoundProduct from "./NotFoundProduct";
 
 function Card({ data }) {
   const { id, title, image, price } = data;

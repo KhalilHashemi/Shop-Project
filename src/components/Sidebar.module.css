@@ -33,7 +33,74 @@
 .selected {
   font-weight: 600;
   background-color: #021526;
-  color: #fff!important;
+  color: #fff !important;
   border-radius: 10px;
-  padding-left: 15px!important;
+  padding-left: 15px !important;
+}
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  .sidebar {
+    width: 95%!important;
+  }
+  .sidebar ul li {
+    padding: 0 5px 0 0;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .sidebar {
+    width: 85%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sidebar div {
+    font-size: 0.7rem;
+  }
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sidebar ul li {
+    font-size: 0.5rem;
+    height: fit-content;
+    padding-left: 5px !important;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .sidebar {
+    width: 85%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sidebar div {
+    font-size: 0.8rem;
+  }
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sidebar ul li {
+    font-size: 0.7rem;
+    height: fit-content;
+    padding-left: 5px !important;
+    margin-right: 7px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  .sidebar {
+    width: 560px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sidebar div {
+    font-size: 0.9rem;
+  }
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sidebar ul li {
+    font-size: 0.8rem;
+    height: fit-content;
+    padding-left: 5px !important;
+    margin-right: 15px;
+  }
 }

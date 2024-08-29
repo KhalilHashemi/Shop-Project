@@ -6,9 +6,11 @@ import { FaArrowLeft } from "react-icons/fa";
 import svg from "../public/EmptyBasket.svg";
 import styles from "./CheckoutPage.module.css";
 import { Link } from "react-router-dom";
+import { useTitle } from "../helpers/helper";
 
 function CheckoutPage() {
   const [state, dispatch] = useCart();
+  useTitle("Checkout")
 
   const clickHandler = (type, payload) => {
     dispatch({ type, payload });

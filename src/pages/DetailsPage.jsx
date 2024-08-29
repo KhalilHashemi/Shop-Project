@@ -7,9 +7,11 @@ import { IoMdPricetag } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa";
 
 import Loader from "../components/Loader";
+import { useTitle } from "../helpers/helper";
 
 function DetailsPage() {
   const { id } = useParams();
+  useTitle("Details Product")
 
   const productDetails = useProductDetails(+id);
 

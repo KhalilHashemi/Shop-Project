@@ -8,6 +8,7 @@ import {
   filterProducts,
   getInitialQuery,
   searchProducts,
+  useTitle,
 } from "../helpers/helper";
 import { useSearchParams } from "react-router-dom";
 import SearchBox from "../components/SearchBox";
@@ -15,6 +16,7 @@ import Sidebar from "../components/Sidebar";
 
 function ProductsPage() {
   const products = useProducts();
+  useTitle("Products");
 
   const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");

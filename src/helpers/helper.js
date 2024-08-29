@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 const shortenText = text => {
     return text.split(" ").slice(0, 3).join("")
 }
@@ -5,6 +7,11 @@ const shortenText = text => {
 const searchProducts = (products, search) => {
     if (!search) return products;
     const searchedProducts = products.filter(p => p.title.toLowerCase().includes(search));
+    // if (searchProducts) {
+    //     return searchProducts;
+    // } else {
+    //     return null
+    // }
     return searchedProducts
 }
 
@@ -44,12 +51,18 @@ const sumProducts = (products) => {
 
 const productQuantity = (state, id) => {
     const index = state.selectedItems.findIndex(item => item.id === id)
-    if(index === -1){
+    if (index === -1) {
         return 0
-    }else{
+    } else {
         return state.selectedItems[index].quantity
     }
-
 }
 
-export { shortenText, searchProducts, filterProducts, createQueryObject, getInitialQuery, sumProducts, productQuantity }
+
+const useTitle = (title) => {
+    useEffect(() => {
+        document.title = title;
+    }, [])
+}
+
+export { shortenText, searchProducts, filterProducts, createQueryObject, getInitialQuery, sumProducts, productQuantity, useTitle }

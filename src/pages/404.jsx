@@ -3,7 +3,10 @@ import { FaArrowLeft } from "react-icons/fa";
 
 import svg from "../public/404.svg";
 import styles from "./404.module.css";
+
+import { useTitle } from "../helpers/helper";
 function PageNotFound() {
+  useTitle("404");
   return (
     <div className={styles.notFound}>
       <div>
