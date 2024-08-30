@@ -8,14 +8,14 @@
   width: 300px;
   padding: 15px 25px;
   background-color: #fff;
-  border: 2px dashed #03346E;
+  border: 2px dashed #03346e;
   border-radius: 50px;
   margin: 10px;
   margin-right: 50px;
 }
 .information {
   width: 100%;
-  border: 2px dashed #03346E;
+  border: 2px dashed #03346e;
   margin: 10px;
   padding: 25px;
   border-radius: 50px;
@@ -26,37 +26,75 @@
   margin-bottom: 40px;
 }
 .description {
-  color: #03346E;
+  color: #03346e;
   font-size: 1.1rem;
   width: 500px;
   margin-bottom: 40px;
 }
 .category svg,
 .information span svg {
-  color: #6EACDA;
+  color: #6eacda;
   margin-right: 10px;
 }
-.information div{
-    display: flex;
-    justify-content: space-between;
+.information div {
+  display: flex;
+  justify-content: space-between;
 }
-.information div span{
+.information div span {
   display: flex;
   align-items: center;
 }
 .information a {
-    display: flex;
-    align-items: center;
-    background-color: #032d51;
-    padding: 5px 10px ;
-    color: #fff;
-    border-radius: 12px;
-    transition: 100ms linear background-color;
+  display: flex;
+  align-items: center;
+  background-color: #032d51;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 12px;
+  transition: 100ms linear background-color;
 }
-.information a:hover{
+.information a:hover {
   background-color: #021526;
-
 }
 .information a svg {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .container img {
+    margin: 0 auto 30px auto;
+    width: 240px;
+  }
+  .information h3 {
+    font-size: 1rem;
+  }
+  .information p {
+    font-size: 0.8rem;
+    width: fit-content;
+    text-align: justify;
+  }
+  .information span {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .container img {
+    margin: 0 auto 30px auto;
+  }
+  .information h3 {
+    font-size: 1.2rem;
+  }
+  .information p {
+    font-size: 1rem;
+    width: fit-content;
+    text-align: justify;
+  }
+  .information span {
+    font-size: 1rem;
+  }
 }
