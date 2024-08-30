@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px dashed #03346E;
+  border: 2px dashed #03346e;
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
@@ -21,7 +21,7 @@
   margin: 0 4px;
 }
 .actions button {
-  background-color: #E2E2B6;
+  background-color: #e2e2b6;
   color: #021526;
   border: none;
   font-size: 1.3rem;
@@ -33,11 +33,22 @@
   cursor: pointer;
   transition: 100ms linear background-color;
 }
-.actions button:hover{
+.actions button:hover {
   background-color: #d2d299;
-
 }
 
-.actions button svg{
+.actions button svg {
   margin-top: 2px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .card p {
+    font-size: 0.8rem;
+  }
+  .card p:nth-child(2) {
+    display: none;
+  }
+  .card div {
+    font-size: 0.8rem;
+  }
 }

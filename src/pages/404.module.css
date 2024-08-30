@@ -22,10 +22,64 @@
 .notFound a:hover {
   background-color: #021526;
 }
-.notFound span{
-    margin-left: 5px;
+.notFound span {
+  margin-left: 5px;
 }
-.notFound img {
+.notFound img.image404 {
   width: 600px;
   height: 600px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .notFound {
+    flex-direction: column;
+  }
+  .notFound img.image404 {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .notFound div h1 {
+    font-size: 1.7rem;
+    margin: 20px 0;
+  }
+  .notFound div a {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .notFound {
+    flex-direction: column;
+  }
+  .notFound img.image404 {
+    width: 500px !important;
+    height: 500px !important;
+  }
+  .notFound div h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  .notFound div a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 850px) {
+  .notFound {
+    flex-direction: column;
+  }
+  .notFound img.image404 {
+    width: 600px !important;
+    height: 600px !important;
+  }
+  .notFound div h1 {
+    font-size: 2.2rem;
+    margin: 20px 0;
+  }
+  .notFound div a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1050px) {
+  .notFound {
+    margin: 0 20px;
+  }
 }

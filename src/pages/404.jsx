@@ -16,7 +16,7 @@ function PageNotFound() {
           <span>Back To Shop</span>
         </Link>
       </div>
-      <img src={svg} alt="" />
+      <img src={svg} alt="Page Not Found" className={styles.image404} />
     </div>
   );
 }

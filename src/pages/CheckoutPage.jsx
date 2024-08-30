@@ -10,7 +10,7 @@ import { useTitle } from "../helpers/helper";
 
 function CheckoutPage() {
   const [state, dispatch] = useCart();
-  useTitle("Checkout")
+  useTitle("Checkout");
 
   const clickHandler = (type, payload) => {
     dispatch({ type, payload });
@@ -29,7 +29,7 @@ function CheckoutPage() {
             <span>Back To Shop</span>
           </Link>
         </div>
-        <img src={svg} alt="Basket" style={{width : "500px" , height : "500px"}} />
+        <img src={svg} alt="Basket" className={styles.basketImage} />
       </div>
     );
   }
