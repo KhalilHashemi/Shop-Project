@@ -11,7 +11,11 @@ import { useTitle } from "../helpers/helper";
 
 function DetailsPage() {
   const { id } = useParams();
+<<<<<<< HEAD
   useTitle("Details Product")
+=======
+  useTitle("Details Product");
+>>>>>>> e8b02bb (some unimportant changes)
 
   const productDetails = useProductDetails(+id);
 
@@ -32,7 +36,11 @@ function DetailsPage() {
             <IoMdPricetag />
             {productDetails.price} $
           </span>
+<<<<<<< HEAD
           <Link to="/products">
+=======
+          <Link to="/">
+>>>>>>> e8b02bb (some unimportant changes)
             <FaArrowLeft />
             <span>Back To Shop</span>
           </Link>

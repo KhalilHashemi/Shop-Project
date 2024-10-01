@@ -24,7 +24,11 @@ function CheckoutPage() {
       >
         <div>
           <h1>Your Basket Is Empty</h1>
+<<<<<<< HEAD
           <Link to="/products">
+=======
+          <Link to="/">
+>>>>>>> e8b02bb (some unimportant changes)
             <FaArrowLeft />
             <span>Back To Shop</span>
           </Link>
