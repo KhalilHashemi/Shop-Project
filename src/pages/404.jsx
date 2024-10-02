@@ -11,11 +11,7 @@ function PageNotFound() {
     <div className={styles.notFound}>
       <div>
         <h1>Page Not Found</h1>
-<<<<<<< HEAD
-        <Link to="/products">
-=======
         <Link to="/">
->>>>>>> e8b02bb (some unimportant changes)
           <FaArrowLeft />
           <span>Back To Shop</span>
         </Link>

@@ -12,11 +12,7 @@ function Layout({ children }) {
   return (
     <>
       <header className={styles.header}>
-<<<<<<< HEAD
-        <Link to="/products">Shop</Link>
-=======
         <Link to="/">Shop</Link>
->>>>>>> e8b02bb (some unimportant changes)
         <Link to="/checkout">
           <div>
             <PiShoppingCartSimpleBold />

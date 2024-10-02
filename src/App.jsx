@@ -13,12 +13,7 @@ function App() {
       <ProductsProvider>
         <Layout>
           <Routes>
-<<<<<<< HEAD
-            <Route path="/" element={<Navigate to="/products" replace />} />
-            <Route path="/products" element={<ProductsPage />} />
-=======
             <Route path="/" element={<ProductsPage />} />
->>>>>>> e8b02bb (some unimportant changes)
             <Route path="/products/:id" element={<DetailsPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/*" element={<PageNotFound />} />
