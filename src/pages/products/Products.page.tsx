@@ -2,7 +2,7 @@
 
 import SearchBox from "@/src/components/SerachBox";
 import { useState } from "react";
-import {  useTitle } from "@/src/utils/helpers";
+import { useTitle } from "@/src/utils/helpers";
 import { useEffect } from "react";
 import Loading from "@/src/components/common/Loading";
 import { useProductsStore } from "@/src/stores/productsStore";
@@ -20,7 +20,8 @@ interface Product {
 }
 
 export default function ProductsPage() {
-  const { products, setProducts, filteredProducts,searchedProducts } = useProductsStore();
+  const { products, setProducts, filteredProducts, searchedProducts } =
+    useProductsStore();
   useTitle("Products");
 
   const [search, setSearch] = useState("");
@@ -38,25 +39,35 @@ export default function ProductsPage() {
   return (
     <div className="w-[65%] flex flex-col items-center">
       <SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
-      <div className="w-full flex justify-between">
-        <div className="w-[70%] flex flex-wrap justify-between">
+      <div className="w-full flex justify-between min-[320px]:flex-col-reverse min-[320px]:justify-center lg:flex-row">
+        <div className="w-[70%] flex flex-wrap justify-between min-[320px]:w-full min-[320px]:justify-center">
           {products.length === 0 && <Loading />}
           {filteredProducts.length > 0 && searchedProducts.length > 0 ? (
-            filteredProducts
-              .filter(p => searchedProducts.some(sp => sp.id === p.id))
-              .length > 0 ? (
+            filteredProducts.filter((p) =>
+              searchedProducts.some((sp) => sp.id === p.id)
+            ).length > 0 ? (
               filteredProducts
-                .filter(p => searchedProducts.some(sp => sp.id === p.id))
-                .map((p: Product , index) => <Card key={index} data={p} index={index}/>)
+                .filter((p) => searchedProducts.some((sp) => sp.id === p.id))
+                .map((p: Product, index) => (
+                  <Card key={index} data={p} index={index} />
+                ))
             ) : (
-              <p className=" w-full mt-8 text-gray-500">No items found matching both category and search criteria</p>
+              <p className=" w-full mt-8 text-gray-500">
+                No items found matching both category and search criteria
+              </p>
             )
           ) : filteredProducts.length > 0 ? (
-            filteredProducts.map((p: Product , index) => <Card key={index} data={p} index={index}/>)
+            filteredProducts.map((p: Product, index) => (
+              <Card key={index} data={p} index={index} />
+            ))
           ) : searchedProducts.length > 0 ? (
-            searchedProducts.map((p: Product , index) => <Card key={index} data={p} index={index}/>)
+            searchedProducts.map((p: Product, index) => (
+              <Card key={index} data={p} index={index} />
+            ))
           ) : (
-            products.map((p: Product , index) => <Card key={index} data={p} index={index}/>)
+            products.map((p: Product, index) => (
+              <Card key={index} data={p} index={index} />
+            ))
           )}
         </div>
         <Sidebar query={query} setQuery={setQuery} />

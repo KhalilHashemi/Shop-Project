@@ -8,7 +8,7 @@ export default function Header() {
   const { selectedProducts } = useProductsStore();
   const router = useRouter();
   return (
-    <header className="w-full h-[8vh] bg-[#021526] flex justify-center items-center sticky top-0 mb-10">
+    <header className="w-full h-[8vh] bg-[#021526] flex justify-center items-center sticky top-0 mb-10 z-50">
       <div className="flex w-[65%] justify-between items-center text-white">
         <motion.div
           initial={{ opacity: 0, y: -10 }}

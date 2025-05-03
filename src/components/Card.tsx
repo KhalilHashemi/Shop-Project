@@ -52,14 +52,14 @@ function Card({ data , index }: any) {
     initial={{ opacity: 0, y: -10 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3 , delay: index * 0.1 }}
-    className="flex flex-col w-[270px] items-start justify-end bg-white border-2 border-dashed border-[#03346e] rounded-3xl px-6 py-3 mb-12">
+    className="flex flex-col w-[200px] xs:w-[220px] sm:w-[240px] md:w-[260px] lg:w-[270px] items-start justify-end bg-white border-2 border-dashed border-[#03346e] rounded-3xl px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 mb-8 xs:mb-10 sm:mb-12 mx-2 xs:mx-3 sm:mx-4 md:mx-5 lg:mx-6">
       <img
         src={image}
         alt={title}
-        className="w-[200px] h-[200px] object-contain mb-6"
+        className="w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] sm:w-[180px] sm:h-[180px] md:w-[190px] md:h-[190px] lg:w-[200px] lg:h-[200px] object-contain mb-4 xs:mb-5 sm:mb-6"
       />
-      <h3 className="text-[#03346e] font-bold mb-2">{shortenText(title)}</h3>
-      <p className="text-[#021526] mb-4">{price} $</p>
+      <h3 className="text-[#03346e] font-bold mb-1.5 xs:mb-1.75 sm:mb-2 text-[0.8rem] xs:text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-base">{shortenText(title)}</h3>
+      <p className="text-[#021526] mb-3 xs:mb-3.5 sm:mb-4 text-[0.8rem] xs:text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-base">{price} $</p>
       <div className="flex justify-between items-center w-full">
         <motion.a
           whileHover={{ scale: 1.1 }}
@@ -67,18 +67,18 @@ function Card({ data , index }: any) {
           transition={{ duration: 0.2 }}
           href={`/products/${id}`}
         >
-          <TbListDetails className="text-[#03346e] text-xl cursor-pointer transition-50ms linear transform" />
+          <TbListDetails className="text-[#03346e] text-lg xs:text-xl cursor-pointer transition-50ms linear transform" />
         </motion.a>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 xs:gap-1 sm:gap-2.5">
           {count === 1 && (
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.2 }}
               onClick={handleRemoveProduct}
-              className="text-[#03346e] flex items-center justify-center bg-[#03346e] text-white text-xl rounded-xl p-1 w-8 h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
+              className="text-[#03346e] flex items-center justify-center bg-[#03346e] text-white text-lg xs:text-xl rounded-xl p-0.5 xs:p-0.75 sm:p-1 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
             >
-              <MdDeleteOutline className="text-xl cursor-pointer transition-50ms linear transform" />
+              <MdDeleteOutline className="text-lg xs:text-xl cursor-pointer transition-50ms linear transform" />
             </motion.button>
           )}
           {count > 1 && (
@@ -87,12 +87,12 @@ function Card({ data , index }: any) {
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.2 }}
               onClick={handleDecrementProduct}
-              className="bg-[#03346e] flex items-center justify-center text-white text-xl rounded-xl p-1 w-8 h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
+              className="bg-[#03346e] flex items-center justify-center text-white text-lg xs:text-xl rounded-xl p-0.5 xs:p-0.75 sm:p-1 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
             >
               -
             </motion.button>
           )}
-          {!!count && <span>{count}</span>}
+          {!!count && <span className="text-sm xs:text-base">{count}</span>}
           {count === 0 ? (
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -100,7 +100,7 @@ function Card({ data , index }: any) {
               transition={{ duration: 0.2 }}
               onClick={handleAddProduct}
             >
-              <TbShoppingBagCheck className="text-[#03346e] bg-[#03346e] text-white rounded-xl p-1 w-8 h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3" />
+              <TbShoppingBagCheck className="text-[#03346e] bg-[#03346e] text-white rounded-xl p-0.5 xs:p-0.75 sm:p-1 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3" />
             </motion.button>
           ) : (
             <motion.button
@@ -108,7 +108,7 @@ function Card({ data , index }: any) {
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.2 }}
               onClick={handleAddProduct}
-              className="bg-[#03346e] flex items-center justify-center text-white text-xl rounded-xl p-1 w-8 h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
+              className="bg-[#03346e] flex items-center justify-center text-white text-lg xs:text-xl rounded-xl p-0.5 xs:p-0.75 sm:p-1 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 cursor-pointer transition-50ms linear transform hover:scale-1.3"
             >
               +
             </motion.button>

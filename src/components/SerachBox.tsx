@@ -33,7 +33,7 @@ function SearchBox({ search, setSearch, setQuery }: any) {
   };
 
   return (
-    <div className="w-full flex justify-start items-center">
+    <div className="w-full flex justify-start items-center ml-12 min-[320px]:ml-6 sm:ml-6 md:ml-6 lg:ml-26">
       <SnackbarProvider />
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -47,7 +47,7 @@ function SearchBox({ search, setSearch, setQuery }: any) {
           value={search}
           onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
           onKeyDown={handleKeyPress}
-          className=" w-[250px] px-6 py-2 border-2 border-dashed border-[#03346e] rounded-2xl text-0.9rem text-[#03346e] mr-6"
+          className="w-full xs:w-[180px] sm:w-[200px] md:w-[220px] lg:w-[250px] px-3 xs:px-4 sm:px-6 py-1 xs:py-1.5 sm:py-2 border-2 border-dashed border-[#03346e] rounded-2xl text-[0.8rem] xs:text-[0.85rem] sm:text-[0.9rem] text-[#03346e] mr-3 xs:mr-4 sm:mr-6"
         />
 
         {search && (
@@ -55,7 +55,7 @@ function SearchBox({ search, setSearch, setQuery }: any) {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
-            className="absolute right-20 top-3.5"
+            className="absolute right-[45px] xs:right-[55px] sm:right-20 top-[8px] xs:top-[10px] sm:top-3.5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ function SearchBox({ search, setSearch, setQuery }: any) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="mr-2 cursor-pointer"
+              className="w-[12px] h-[12px] xs:w-[14px] xs:h-[14px] sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] cursor-pointer mr-2"
               onClick={() => setSearch("")}
             >
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -80,9 +80,9 @@ function SearchBox({ search, setSearch, setQuery }: any) {
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.1 }}
           onClick={searchHandler}
-          className="p-4 bg-[#03346e] text-white border-none rounded-2xl cursor-pointer transition-all duration-100"
+          className="p-2 xs:p-2.5 sm:p-3 md:p-3.5 lg:p-4 bg-[#03346e] text-white border-none rounded-2xl cursor-pointer transition-all duration-100"
         >
-          <ImSearch />
+          <ImSearch className="w-[12px] h-[12px] xs:w-[14px] xs:h-[14px] sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
         </motion.button>
       </motion.div>
     </div>
